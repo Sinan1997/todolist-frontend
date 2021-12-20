@@ -6,7 +6,7 @@
       <div class="card h-100">
         <img :src="getAvatar(toDos)" class="card-img-top" :alt="toDos.nameToDo + ' ' +  toDos.datum">
         <div class="card-body">
-          <h5 class="card-title">{{ toDos.nameToDo}}{{ toDo.datum}}</h5>
+          <h5 class="card-title">{{ toDos.nameToDo}}{{ toDos.datum}}</h5>
           <p class="card-text">
             {{ toDos.nameToDo }} {{ toDo.datum }} hat {{ toDo.list ? 'eine ToDo-Liste' : 'keine toDo-Liste' }} und hat {{ toDos.toDos.length}} Aufgaben abgerabeitet.
           </p>
@@ -21,7 +21,7 @@
 import { meta as toDos } from 'eslint-plugin-import/lib/rules/export'
 
 export default {
-  name: 'To-Dos',
+  name: 'toDos',
   data () {
     return {
       toDos: []
@@ -42,7 +42,7 @@ export default {
       redirect: 'follow'
     }
 
-    fetch('http://localhost3565', requestOptions)
+    fetch('http://localhost8080/api/v1/toDos', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(toDos => {
         this.toDos.push(toDos)
