@@ -30,7 +30,7 @@ export default {
   methods: {
     getAvatar () {
       if (toDos.type === 'DAILYTASK') {
-        return require('../assets/DailyTask.png.png')
+        return require('../assets/DailyTask.png')
       } else if (toDos.type === 'PROGRAMMING') {
         return require('../assets/Java.png')
       }
