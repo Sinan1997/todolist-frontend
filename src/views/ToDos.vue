@@ -2,13 +2,13 @@
   <h1>Welcome to your To-Dos</h1>
   <div class="container-fluid">
      <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" v-for="person in persons" :key="person.id">
+    <div class="col" v-for="toDos in toDos" :key="toDos.id">
       <div class="card h-100">
-        <img :src="getAvatar(person)" class="card-img-top" :alt="person.firstName + ' ' +  person.lastName">
+        <img :src="getAvatar(toDos)" class="card-img-top" :alt="toDos.nameToDo + ' ' +  toDos.datum">
         <div class="card-body">
-          <h5 class="card-title">{{ person.firstName}}{{ person.lastName}}</h5>
+          <h5 class="card-title">{{ toDos.nameToDo}}{{ toDo.datum}}</h5>
           <p class="card-text">
-            {{ person.firstName }} {{ person.lastName }} hat {{ person.list ? 'eine ToDo-Liste' : 'keine toDo-Liste' }} und hat {{ person.toDos.length}} Aufgaben abgerabeitet.
+            {{ toDos.nameToDo }} {{ toDo.datum }} hat {{ toDo.list ? 'eine ToDo-Liste' : 'keine toDo-Liste' }} und hat {{ toDos.toDos.length}} Aufgaben abgerabeitet.
           </p>
         </div>
       </div>
@@ -18,19 +18,21 @@
 </template>
 
 <script>
+import { meta as toDos } from 'eslint-plugin-import/lib/rules/export'
+
 export default {
-  name: 'Persons',
+  name: 'To-Dos',
   data () {
     return {
-      persons: []
+      toDos: []
     }
   },
   methods: {
-    getAvatar (person) {
-      if (person.gender === 'MALE') {
-        return require('../assets/male.png')
-      } else if (person.gender === 'FEMALE') {
-        return require('../assets/female.png')
+    getAvatar () {
+      if (toDos.type === 'DAILYTASK') {
+        return require('../assets/DailyTask.png.png')
+      } else if (toDos.type === 'PROGRAMMING') {
+        return require('../assets/Java.png')
       }
     }
   },
@@ -42,8 +44,8 @@ export default {
 
     fetch('http://localhost3565', requestOptions)
       .then(response => response.json())
-      .then(result => result.forEach(person => {
-        this.persons.push(person)
+      .then(result => result.forEach(toDos => {
+        this.toDos.push(toDos)
       }))
       .catch(error => console.log('error', error))
   }
