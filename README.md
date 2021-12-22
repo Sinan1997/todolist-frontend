@@ -24,6 +24,7 @@ npm run test:unit
 ```
 npm run lint
 ```
-
+### Status Badge
+[![CI](https://github.com/Sinan1997/todolist-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/Sinan1997/todolist-frontend/actions/workflows/ci.yml)
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

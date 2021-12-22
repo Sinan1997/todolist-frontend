@@ -1,24 +1,23 @@
 <template>
-  <h1>Welcome to your To-Dos</h1>
+  <h1>Willkommen zu den to-Dos</h1>
   <div class="container-fluid">
-     <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" v-for="toDos in toDos" :key="toDos.id">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col" v-for="toDo in toDos" :key="toDo.id">
       <div class="card h-100">
-        <img :src="getAvatar(toDos)" class="card-img-top" :alt="toDos.nameToDo + ' ' +  toDos.datum">
+        <img :src="getAvatar(toDo)" class="card-img-top" :alt="toDo.nameToDo + ' ' +  toDo.datum">
         <div class="card-body">
-          <h5 class="card-title">{{ toDos.nameToDo}}{{ toDos.datum}}</h5>
+          <h5 class="card-title">{{ toDo.nameToDo}}</h5>
           <p class="card-text">
-            {{ toDos.nameToDo }} {{ toDo.datum }} hat {{ toDo.complete ? 'die Aufgabe abgeschlossen' : 'die Aufgabe noch nicht abgeschlossem' }}.
+            {{ toDos.nameToDo }} wurde am {{ toDo.datum }} erstellt und wurde {{ toDo.complete ? 'abgeschlossen' : 'noch nicht abgeschlossen' }}.
           </p>
-        </div>
-      </div>
+     </div>
      </div>
     </div>
+   </div>
   </div>
 </template>
 
 <script>
-import { meta as toDos } from 'eslint-plugin-import/lib/rules/export'
 
 export default {
   name: 'toDos',
@@ -28,24 +27,25 @@ export default {
     }
   },
   methods: {
-    getAvatar () {
-      if (toDos.type === 'DAILYTASK') {
+    getAvatar (toDo) {
+      if (toDo.typeTask === 'DAILYTASK') {
         return require('../assets/DailyTask.png')
-      } else if (toDos.type === 'PROGRAMMING') {
+      } else if (toDo.typeTask === 'PROGRAMMING') {
         return require('../assets/Java.png')
       }
     }
   },
   mounted () {
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/toDos'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
 
-    fetch('http://localhost8000/api/v1/toDos', requestOptions)
+    fetch(endpoint, requestOptions)
       .then(response => response.json())
-      .then(result => result.forEach(toDos => {
-        this.toDos.push(toDos)
+      .then(result => result.forEach(toDo => {
+        this.toDos.push(toDo)
       }))
       .catch(error => console.log('error', error))
   }
