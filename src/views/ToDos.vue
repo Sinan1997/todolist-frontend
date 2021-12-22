@@ -8,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ toDos.nameToDo}}{{ toDos.datum}}</h5>
           <p class="card-text">
-            {{ toDos.nameToDo }} {{ toDo.datum }} hat {{ toDo.list ? 'eine ToDo-Liste' : 'keine toDo-Liste' }} und hat {{ toDos.toDos.length}} Aufgaben abgerabeitet.
+            {{ toDos.nameToDo }} {{ toDo.datum }} hat {{ toDo.complete ? 'die Aufgabe abgeschlossen' : 'die Aufgabe noch nicht abgeschlossem' }}.
           </p>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default {
       redirect: 'follow'
     }
 
-    fetch('http://localhost8080/api/v1/toDos', requestOptions)
+    fetch('http://localhost8000/api/v1/toDos', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(toDos => {
         this.toDos.push(toDos)
