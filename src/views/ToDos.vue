@@ -36,13 +36,12 @@ export default {
     }
   },
   mounted () {
-    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/toDos'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
 
-    fetch(endpoint, requestOptions)
+    fetch('https://webtech-todolist.herokuapp.com/api/v1/toDos', requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(toDo => {
         this.toDos.push(toDo)
