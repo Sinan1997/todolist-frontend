@@ -3,15 +3,13 @@
   <div class="container-fluid">
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col" v-for="toDo in toDos" :key="toDo.id">
-      <div class="card h-100">
+      <div class="card">
         <img :src="getAvatar(toDo)" class="card-img-top" :alt="toDo.nameToDo + ' ' +  toDo.datum">
-        <div class="card-body">
-          <h5 class="card-title">{{ toDo.nameToDo}}</h5>
-          <p class="card-text">
-            {{ toDos.nameToDo }} wurde am {{ toDo.datum }} erstellt und wurde {{ toDo.complete ? 'abgeschlossen' : 'noch nicht abgeschlossen' }}.
-          </p>
-     </div>
-     </div>
+        <h5 class="card-title">{{ toDo.nameToDo}}</h5>
+        <p class="card-text">
+          {{ toDos.nameToDo }} wurde am {{ toDo.datum }} erstellt und wurde {{ toDo.complete ? 'abgeschlossen' : 'noch nicht abgeschlossen' }}.
+        </p>
+      </div>
     </div>
    </div>
   </div>

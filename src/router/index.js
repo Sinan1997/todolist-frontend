@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ToDos from '../views/ToDos.vue'
-import Calender from '../views/Calender.vue'
 
 const routes = [
   {
@@ -19,11 +18,6 @@ const routes = [
     path: '/to-dos',
     name: 'To-Dos',
     component: ToDos
-  },
-  {
-    path: '/calender',
-    name: 'Calender',
-    component: Calender
   }
 
 ]
