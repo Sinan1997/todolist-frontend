@@ -1,15 +1,15 @@
 <template>
   <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#toDos-create-offcanvas"
-          aria-controls="#ToDo-create-offcanvas">
+          aria-controls="#toDos-create-offcanvas">
     <i class="bi bi-toDo-plus-fill"></i>
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="toDos-create-offcanvas" aria-labelledby="offcanvas-label">
   <div class="offcanvas-header">
     <h5 id="offcanvas-label">New toDo</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" id="close-offcanvas" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <form class="text-start needs-validation" id="to-do-create-form" novalidate>
+    <form class="text-start needs-validation" id="to-Dos-create-form" novalidate>
       <div class="mb-3">
         <label for="name_ToDo" class="form-label">To Do Name</label>
         <input type="text" class="form-control" id="name_toDo" v-model="toDoName" required>
@@ -19,14 +19,14 @@
       </div>
       <div class="mb-3">
         <label for="datum" class="form-label">Datum</label>
-        <input type="text" class="form-control" id="datum" v-model="date" required>
+        <input type="text" class="form-control" id="datum" v-model="datum" required>
         <div class="invalid-feedback">
           Bitte geben sie ein Datum ein.
         </div>
       </div>
       <div class="mb-3">
         <label for="typetask" class="form-label">ToDo-Typ</label>
-        <select id="typetask" class="form-select"   v-model="typeTask" required>
+        <select id="typetask" class="form-select" v-model="typeTask" required>
           <option value="" selected disabled>Wähle...</option>
           <option value="DAILYTASK">Dailytask</option>
           <option value="PROGRAMMING">Programming</option>
@@ -60,7 +60,7 @@ export default {
   data () {
     return {
       toDoName: '',
-      date: '',
+      datum: '',
       typeTask: '',
       serverValidationMessages: []
     }
@@ -105,7 +105,7 @@ export default {
       }
     },
     validate () {
-      const form = document.getElementById('persons-create-form')
+      const form = document.getElementById('to-Dos-create-form')
       form.classList.add('was-validated')
       return form.checkValidity()
     }
@@ -114,5 +114,11 @@ export default {
 </script>
 
 <style scoped>
-
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
 </style>

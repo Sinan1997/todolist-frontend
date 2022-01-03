@@ -4,7 +4,7 @@
    <div class="card-body">
      <h5 class="card-title">{{ toDo.nameToDo}}</h5>
      <p class="card-text">
-       {{ toDos.nameToDo }} wurde am {{ toDo.datum }} erstellt und wurde {{ toDo.complete ? 'abgeschlossen' : 'noch nicht abgeschlossen' }}.
+       Die To-Do {{ toDo.nameToDo }} wurde am {{ toDo.datum }} erstellt.
      </p>
    </div>
   </div>
