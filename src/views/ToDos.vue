@@ -1,36 +1,37 @@
 <template>
   <h1>Willkommen zu den to-Dos</h1>
   <div class="container-fluid">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" v-for="toDo in toDos" :key="toDo.id">
-      <div class="card">
-        <img :src="getAvatar(toDo)" class="card-img-top" :alt="toDo.nameToDo + ' ' +  toDo.datum">
-        <h5 class="card-title">{{ toDo.nameToDo}}</h5>
-        <p class="card-text">
-          {{ toDos.nameToDo }} wurde am {{ toDo.datum }} erstellt und wurde {{ toDo.complete ? 'abgeschlossen' : 'noch nicht abgeschlossen' }}.
-        </p>
-      </div>
-    </div>
-   </div>
+    <to-dos-card-list :toDos="this.toDos"></to-dos-card-list>
   </div>
+  <to-dos-create-form @created="addToDo"></to-dos-create-form>
 </template>
 
 <script>
+import toDosCardList from '../components/toDosCardList'
+import toDosCreateForm from '../components/toDosCreateForm'
 
 export default {
   name: 'toDos',
+  components: {
+    toDosCardList,
+    toDosCreateForm
+  },
   data () {
     return {
       toDos: []
     }
   },
   methods: {
-    getAvatar (toDo) {
-      if (toDo.typeTask === 'DAILYTASK') {
-        return require('../assets/DailyTask.png')
-      } else if (toDo.typeTask === 'PROGRAMMING') {
-        return require('../assets/Java.png')
+    addToDo (personLocation) {
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + personLocation
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
       }
+      fetch(endpoint, requestOptions)
+        .then(response => response.json())
+        .then(toDo => this.toDos.push(toDo))
+        .catch(error => console.log('error', error))
     }
   },
   mounted () {

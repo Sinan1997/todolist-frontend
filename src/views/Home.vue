@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <img src="../assets/ToDoList.png" class="rounded float-start" alt="Vue-Logo">
-    <div>
-    </div>
+    <img alt="toDo logo" src="../assets/ToDoList.png">
     <HelloWorld msg="Willkommen auf deiner To-Do List. Auf dieser Seite kannst du To-Dos erstellen, abhaken oder löschen"/>
   </div>
 </template>
