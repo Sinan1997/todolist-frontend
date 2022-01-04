@@ -11,8 +11,8 @@
   <div class="offcanvas-body">
     <form class="text-start needs-validation" id="to-Dos-create-form" novalidate>
       <div class="mb-3">
-        <label for="name_ToDo" class="form-label">To Do Name</label>
-        <input type="text" class="form-control" id="name_toDo" v-model="toDoName" required>
+        <label for="nameToDo" class="form-label">To Do Name</label>
+        <input type="text" class="form-control" id="nameToDo" v-model="nameToDo" required>
         <div class="invalid-feedback">
           Bitte definieren sie ihre To Do.
         </div>
@@ -59,7 +59,7 @@ export default {
   name: 'toDosCreateForm',
   data () {
     return {
-      toDoName: '',
+      nameToDo: '',
       datum: '',
       typeTask: '',
       serverValidationMessages: []
