@@ -1,10 +1,10 @@
 <template>
-  <div class="card h-50">
-   <img :src="getAvatar(toDo)" class="card-img-top" :alt="toDo.nameToDo + ' ' +  toDo.datum">
+  <div>
+   <img :src="getAvatar(toDo)" class="card-img-top" style="width:200px;height:200px;"  :alt="toDo.nameToDo + ' ' +  toDo.datum">
    <div class="card-body">
      <h5 class="card-title">{{ toDo.nameToDo}}</h5>
-     <p class="card-text">
-       Die To-Do {{ toDo.nameToDo }} wurde am {{ toDo.datum }} erstellt.
+     <p class="card-text" style="font-size: small">
+       Die To-Do "{{ toDo.nameToDo }}" wurde am {{ toDo.datum }} erstellt.
      </p>
    </div>
   </div>

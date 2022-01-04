@@ -1,5 +1,6 @@
 <template>
   <h1>Willkommen zu den to-Dos</h1>
+  <h5>Wenn du eine To-Do abgeschlossen hast, kannst du sie abhaken.</h5>
   <div class="container-fluid">
     <to-dos-card-list :toDos="this.toDos"></to-dos-card-list>
   </div>
@@ -22,8 +23,8 @@ export default {
     }
   },
   methods: {
-    addToDo (personLocation) {
-      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + personLocation
+    addToDo (toDoLocation) {
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + toDoLocation
       const requestOptions = {
         method: 'GET',
         redirect: 'follow'

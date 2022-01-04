@@ -1,7 +1,7 @@
 <template>
   <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#toDos-create-offcanvas"
           aria-controls="#toDos-create-offcanvas">
-    <i class="bi bi-toDo-plus-fill"></i>
+    <img src="../assets/hinzufügen2.png" style="width:25px;height:25px;" >
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="toDos-create-offcanvas" aria-labelledby="offcanvas-label">
   <div class="offcanvas-header">
@@ -65,7 +65,6 @@ export default {
       serverValidationMessages: []
     }
   },
-  emits: ['created'],
   methods: {
     async createToDo () {
       if (this.validate()) {
