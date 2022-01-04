@@ -56,7 +56,7 @@
 
 <script>
 export default {
-  name: 'toDosCreateForm',
+  name: 'ToDosCreateForm',
   data () {
     return {
       nameToDo: '',
@@ -65,8 +65,9 @@ export default {
       serverValidationMessages: []
     }
   },
+  emits: ['created'],
   methods: {
-    async createToDo () {
+    async  createToDo () {
       if (this.validate()) {
         const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/toDos'
 
@@ -75,7 +76,7 @@ export default {
 
         const toDo = JSON.stringify({
           nameToDo: this.nameToDo,
-          datum: this.date,
+          datum: this.datum,
           typeTask: this.typeTask
         })
 
