@@ -1,7 +1,7 @@
 <template>
   <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#toDos-create-offcanvas"
           aria-controls="#toDos-create-offcanvas">
-    <img src="../assets/hinzufügen2.png" style="width:25px;height:25px;" >
+    <img src="../assets/add.png" style="width:25px;height:25px;" >
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="toDos-create-offcanvas" aria-labelledby="offcanvas-label">
   <div class="offcanvas-header">
@@ -32,7 +32,7 @@
           <option value="PROGRAMMING">Programming</option>
           <option value="WORK">Work</option>
           <option value="SPORT">Sport</option>
-          <option value="DIVERSE">Diverse</option>
+          <option value="SONSTIGES">Sonstiges</option>
         </select>
         <div class="invalid-feedback">
           Bitte wählen sie ein ToDo-Typ aus.
