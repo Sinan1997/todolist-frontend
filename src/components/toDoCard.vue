@@ -6,7 +6,7 @@
        Die To-Do "{{ toDo.nameToDo }}" wurde am {{ toDo.datum }} erstellt.
      </p>
      <div class="mt-5">
-      <button class="btn btn-primary me-3" type="button" @click.prevent="deleteToDo">Delete</button>
+       <button class="btn btn-outline-danger me-3" type="button" @click.prevent="deleteToDo">Delete</button>
 <!--     <a class="btn btn-primary" data-bs-toggle="offcanvas"  href="#offcanvasExample" role="button" aria-controls="offcanvasExample">-->
 <!--       Recreate-->
 <!--     </a>-->

@@ -1,22 +1,22 @@
 <template>
   <h1>Willkommen zu den To-Dos</h1>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Informationen zur Nutzung
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Auf Dieser Seite haben Sie eine Übersicht von den erstellten To-Dos. Sie werden je nach Aufgabentyp angezeigt und bringen einige Funktionen mit sich. Dazu gehört das erstellen einer To-Do mit dem Button unten rechts. Außerdem haben Sie die Möglichkeit einzelne To-Dos zu löschen oder abzuhaken.
-         </div>
-        </div>
+<!--    <div class="accordion accordion-flush" id="accordionFlushExample">-->
+<!--      <div class="accordion-item">-->
+<!--        <h2 class="accordion-header" id="flush-headingOne">-->
+<!--          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">-->
+<!--            Informationen zur Nutzung-->
+<!--          </button>-->
+<!--        </h2>-->
+<!--        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">-->
+<!--          <div class="accordion-body">Auf Dieser Seite haben Sie eine Übersicht von den erstellten To-Dos. Sie werden je nach Aufgabentyp angezeigt und bringen einige Funktionen mit sich. Dazu gehört das erstellen einer To-Do mit dem Button unten rechts. Außerdem haben Sie die Möglichkeit einzelne To-Dos zu löschen oder abzuhaken.-->
+<!--         </div>-->
+<!--        </div>-->
   <div class="container-fluid">
     <to-dos-card-list :toDos="this.toDos"></to-dos-card-list>
   </div>
   <to-dos-create-form @created="addToDo"></to-dos-create-form>
-  </div>
-    </div>
+<!--  </div>-->
+<!--    </div>-->
 </template>
 
 <script>
