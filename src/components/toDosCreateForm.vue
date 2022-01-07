@@ -19,7 +19,7 @@
       </div>
       <div class="mb-3">
         <label for="datum" class="form-label">Datum</label>
-        <input type="text" class="form-control" id="datum" v-model="datum" required>
+        <input type="date" class="form-control" id="datum" v-model="datum" required>
         <div class="invalid-feedback">
           Bitte geben sie ein Datum ein.
         </div>
