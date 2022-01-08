@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="col-md-4 col-xs-6">
-   <img id="toDo logo" src="../assets/toDoDome.jpeg" >
+   <img id="toDo logo" src="../assets/toDoDome.jpeg">
   </div>
   </div>
   <div class="text">
@@ -22,17 +22,17 @@ export default {
 </script>
 <style scoped>
 .home {
-  position: fixed;
-  bottom: 300px;
-  right: 1500px;
+  position: relative;
+  bottom: -200px;
+  right: 100px;
   padding: 50px 15px;
   border-radius: 30px;
 }
 .text{
-  position: fixed;
-  bottom: 470px;
-  right: -300px;
-  padding: 0px 550px;
+  position: relative;
+  bottom: 110px;
+  right: -120px;
+  padding: 0px 300px;
   border-radius: 30px;
 }
 </style>

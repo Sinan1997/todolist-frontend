@@ -8,6 +8,12 @@
      <div class="mt-1">
        <button class="btn btn-outline-danger me-3" type="button" @click.prevent="deleteToDo">Löschen</button>
     </div>
+     <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+       <label class="form-check-label" for="flexCheckDefault">
+         Aufgabe erledigt.
+       </label>
+     </div>
      </div>
 </template>
 
@@ -71,7 +77,6 @@ export default {
 
 <style scoped>
 .form-check{
-  position: fixed;
   bottom: 390px;
   right: 840px;
   padding: 70px 570px;
