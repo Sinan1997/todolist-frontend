@@ -11,13 +11,13 @@ describe('toDoCardList.vue testen', () => {
           {
             id: 1,
             nameToDo: 'Backen',
-            datum: '28.01.2022',
+            datum: '2022-01-10',
             typeTask: 'DAILYTASK'
           },
           {
             id: 2,
             nameToDo: 'Aufräumen',
-            datum: '29.01.2022',
+            datum: '2022-01-11',
             typeTask: 'DAILYTASK'
           }
         ]

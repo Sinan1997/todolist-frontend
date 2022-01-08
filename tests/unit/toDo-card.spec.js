@@ -9,7 +9,7 @@ describe('toDoCard.vue testen', () => {
         toDo: {
           id: 1,
           nameToDo: 'Backen',
-          datum: '28.01.2022',
+          datum: '2022-02-01',
           typeTask: 'DAILYTASK'
         }
       }
