@@ -32,7 +32,7 @@ export default {
   position: relative;
   bottom: 110px;
   right: -120px;
-  padding: 0px 300px;
+  padding: 0px 330px;
   border-radius: 30px;
 }
 </style>

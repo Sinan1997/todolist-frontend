@@ -11,7 +11,7 @@
      <div class="form-check">
        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
        <label class="form-check-label" for="flexCheckDefault">
-         Aufgabe erledigt.
+         Erledigt
        </label>
      </div>
      </div>
@@ -77,9 +77,10 @@ export default {
 
 <style scoped>
 .form-check{
-  bottom: 390px;
-  right: 840px;
-  padding: 70px 570px;
+  position: unset;
+  bottom: 300px;
+  right: 200px;
+  padding: 10px 428px;
   border-radius: 10px;
 }
 
