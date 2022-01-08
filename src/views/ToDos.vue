@@ -8,7 +8,8 @@
           </button>
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Auf Dieser Seite haben Sie eine Übersicht von den erstellten To-Dos. Sie werden je nach Aufgabentyp angezeigt und bringen einige Funktionen mit sich. Dazu gehört das erstellen einer To-Do mit dem Button unten rechts. Außerdem haben Sie die Möglichkeit einzelne To-Dos zu löschen oder abzuhaken.
+          <div class="accordion-body">Auf Dieser Seite haben Sie eine Übersicht von den erstellten To-Dos. Sie werden je nach Aufgabentyp angezeigt und bringen einige Funktionen mit sich. Dazu gehört das erstellen einer To-Do mit dem Button unten rechts. Außerdem haben Sie die Möglichkeit einzelne To-Dos zu löschen oder abzuhaken. Falls Sie eine To-Do löschen, wird sie beim erneuten aktualisieren der Seite nicht mehr angezeigt.
+            Falls Sie lernen müssen stellen wir auch einen Pomodoro Timer zur verfügung, den sehen Sie in der Navigations Leiste, um so produktiv wie möglich zu sein.
          </div>
         </div>
   <div class="container-fluid">
