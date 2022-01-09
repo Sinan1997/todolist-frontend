@@ -1,5 +1,5 @@
 <template>
-  <h1> </h1>
+  <h1> Willkommen bei den To-Dos</h1>
     <div class="accordion accordion-flush" id="accordionFlushExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingOne">

@@ -16,12 +16,11 @@
         <div class="invalid-feedback">
           Bitte definieren sie ihre To Do.
         </div>
-      </div>
       <div class="mb-3">
         <label for="datum" class="form-label">Datum</label>
         <input type="date" class="form-control" id="datum" v-model="datum" required>
         <div class="invalid-feedback">
-          Bitte geben sie ein Datum ein.
+          Bitte wählen Sie ein Datum ein.
         </div>
       </div>
       <div class="mb-3">
@@ -48,6 +47,7 @@
       <div class="mt-5">
         <button class="btn btn-primary me-3" type="submit" @click.prevent="createToDo">Create</button>
         <button class="btn btn-danger" type="reset">Reset</button>
+      </div>
       </div>
     </form>
    </div>
