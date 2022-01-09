@@ -103,7 +103,7 @@ export default {
         .catch(error => console.log('error', error))
     },
     updateToDo () {
-      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/toDos/' + this.toDo.id
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/toDos/' + this.toDos.id
       const headers = new Headers()
       headers.append('Content-Type', 'application/json')
       const toDo = JSON.stringify({
