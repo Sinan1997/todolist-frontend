@@ -5,7 +5,7 @@
   </div>
   </div>
   <div class="text">
-  <HelloWorld msg="Willkommen auf der To-Do-List Website. Auf dieser Seite kannst du To-Dos erstellen, löschen und einen Pomodoro Timer benutzen."/>
+  <HelloWorld msg="Willkommen auf der To-Do-List Website. Auf dieser Seite kannst du To-Dos erstellen, bearbeiten, löschen und einen Pomodoro Timer benutzen."/>
   </div>
 </template>
 
