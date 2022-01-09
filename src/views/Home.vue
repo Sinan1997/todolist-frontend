@@ -30,9 +30,9 @@ export default {
 }
 .text{
   position: relative;
-  bottom: 110px;
+  bottom: 120px;
   right: -120px;
-  padding: 0px 330px;
+  padding: 0px 150px;
   border-radius: 30px;
 }
 </style>

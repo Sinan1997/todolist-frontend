@@ -3,20 +3,18 @@
    <div class="card-body">
      <h5 class="card-title">{{ toDo.nameToDo}}</h5>
      <p class="card-text" style="font-size: small">
-       Die To-Do "{{ toDo.nameToDo }}" wurde am {{ toDo.datum }} erstellt.
+       Die To-Do "{{ toDo.nameToDo }}" ist zum {{ toDo.datum }} fällig.
      </p>
      <div class="mb-3">
        <button class="btn btn-outline-danger me-3" type="button" @click="deleteToDo">Löschen</button>
-    </div>
-     <div class="form-check">
-       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-       <label class="form-check-label" for="flexCheckDefault">
-         Erledigt
-       </label>
-     </div>
-     <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-       Update
+     <a class="btn btn-outline-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+       Bearbeiten
      </a>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      Erledigt
+    </label>
      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
        <div class="offcanvas-header">
          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Update your To-Do</h5>
@@ -32,7 +30,7 @@
        </div>
           </div>
            <div class="mb-3">
-             <label for="formGroupExampleInput2" class="form-label">Datum</label>
+             <label for="formGroupExampleInput2" class="form-label">Datum für Deadline</label>
              <input type="date" class="form-control" id="formGroupExampleInput2" v-model="datum" required>
              <div class="invalid-feedback">
                Bitte wählen Sie ein Datum aus.
@@ -52,13 +50,6 @@
                Bitte wählen sie ein ToDo-Typ aus.
              </div>
            </div>
-           <div v-if="this.serverValidationMessages">
-             <ul>
-               <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: red">
-                 {{ message }}
-               </li>
-             </ul>
-           </div>
            <div class="mt-5">
              <button class="btn btn-primary me-3" type="submit" @click.prevent="updateToDo">Update</button>
              <button class="btn btn-danger" type="reset">Reset</button>
@@ -66,6 +57,8 @@
        </form>
        </div>
      </div>
+   </div>
+   </div>
    </div>
 </template>
 
@@ -94,6 +87,8 @@ export default {
         return require('../assets/Work.png')
       } else if (toDo.typeTask === 'SPORT') {
         return require('../assets/Sport.png')
+      } else if (toDo.typeTask === 'SONSTIGES') {
+        return require('../assets/sonstiges.png')
       }
     },
     deleteToDo () {
@@ -148,11 +143,16 @@ export default {
 
 <style scoped>
 .form-check{
-  position: unset;
   bottom: 300px;
+  right: 150px;
+  padding: 10px 290px;
+  border-radius: 15px;
+}
+.btn-primary {
+  bottom: 100px;
   right: 200px;
-  padding: 10px 428px;
-  border-radius: 10px;
+  padding: 10px 30px;
+  border-radius: 50px;
 }
 
 </style>
