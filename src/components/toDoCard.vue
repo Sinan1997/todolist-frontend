@@ -103,9 +103,10 @@ export default {
         .catch(error => console.log('error', error))
     },
     updateToDo () {
-      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/toDos/' + this.toDos.id
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/toDos/' + this.toDo.id
       const headers = new Headers()
       headers.append('Content-Type', 'application/json')
+
       const toDo = JSON.stringify({
         nameToDo: this.nameToDo,
         datum: this.datum,
@@ -119,7 +120,7 @@ export default {
         redirect: 'follow'
       }
       fetch(endpoint, requestOptions)
-        .then(response => response.json())
+        .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error))
     }
